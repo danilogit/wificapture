@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:keepScreenOn="true"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/btnCaptureOn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="startCapture"
+        android:text="Start"/>
+
+    <Button
+        android:id="@+id/btnCaptureOff"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="stopCapture"
+        android:text="Stop"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnGpsON"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="enableGPS"
+            android:text="GPS ON"/>
+
+        <Button
+            android:id="@+id/btnGpsOFF"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="disableGPS"
+            android:text="GPS OFF"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Total: 0"/>
+
+    <TextView
+        android:id="@+id/txtExporting"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Exporting: 0/0"/>
+
+
+    <ListView
+        android:id="@+id/lvCaptures"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"></ListView>
+
+</LinearLayout>
